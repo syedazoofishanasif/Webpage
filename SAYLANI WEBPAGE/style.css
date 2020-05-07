@@ -1,0 +1,292 @@
+*{
+    margin:"0px";
+    padding: "0px";
+    box-sizing: border-box;
+}
+body{
+    background-color: #f8f8ff;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 2vh;
+    background-color:#406ece;
+}
+.options{
+    display: flex;
+    justify-content: space-around;
+    width: 30%
+}
+.options li{
+    list-style: none;
+}
+.options a{
+    background-color:#fafbfc;
+    background-size: 30%;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold ;
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: green;
+}
+p{
+    color: ivory;
+}
+.bottom-nav{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    min-height: 2vh;
+    background-color:rgba(250, 252, 253, 0.945);
+}
+.bottom-nav ul{
+    width: 50%;
+    height: 45px;
+    display:flex;
+    justify-content: space-between;
+    align-items: right;
+    text-align: right;
+}
+.bottom-nav li{
+    list-style: none;
+}
+.bottom-nav a{
+    text-decoration: none;
+    letter-spacing: 2px;
+    word-spacing: 30%;
+    font-weight: bold ;
+    font-size: 14px;
+    font-family: 'Calibri';
+    color:black;
+}
+.active .bottom-nav:hover
+{
+    background-color: white;
+    border-radius: 3px;
+}
+.sub-menu1{
+    display: none;
+
+}
+.active .bottom-nav ul li:hover .sub-menu1
+{
+    display: block;
+    position: absolute;
+    background-color: white;
+    margin-top: 15px;
+    margin-left: -15px;
+}
+@media screen and (max-width: 1024px){
+    .options {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 768px){
+    body{
+        display:none;
+    }
+}
+@media screen and (max-width: 1024px){
+    .options {
+        position: absolute;
+        right:0px;
+        height: 92vh;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.burger div{
+    width: 25px;
+    height: 5px;
+    color: white;
+    margin: 5px;
+}
+#slider-container {
+    position: absolute;
+    height: 150px;
+    width: 100%;
+    max-width: 1000px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0 0 15px #888;
+  }
+  
+  #slider-scroller {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(260px * 6);
+    transition: all 1s ease;
+  }
+  
+  .slider-item {
+    width: 220px;
+    height: 110px;
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+  }
+  
+  .slider-item img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 200px;
+    max-height: 100px;
+  }
+  @keyframes slider
+  {
+    0%{
+        left: 0;
+      }
+    20%{
+        left: 0; 
+    }
+    25%{
+        left:-100;
+    }
+  }
+  #slider{
+      overflow: hidden;
+  }
+  #slider figure img{
+      width: 20%;
+      float: left;
+  }
+  #slider figure{
+      position: relative;
+      width: 500%;
+      margin: 0;
+      left: 0;
+      animation: 20s slider infinite;
+  }
+  marquee{
+      background-color: #214fc6;
+      font-size: 14px;
+      color: white;
+      height: 30px;
+      margin-top: 0px;
+  }
+  .center {
+    display: block;
+    margin-left: 0px;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 105%;
+  }
+  .center2 {
+    display: block;
+    margin-left: 0px;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 110%;
+  }
+  .btn {
+    float: left;
+    width: 20%;
+    padding: 5px;
+    text-align: center;    
+    background: white;
+    border: 30px solid white;
+    box-shadow: 0 5px 15px #00000070;
+    margin-top: 50px;
+    margin-left: 130px ;
+    margin-right: 0px;
+    border-spacing: 10px;
+  }
+  
+  /* Clear floats after image containers */
+  .middle::after {
+    content: "";
+    clear: both;
+    display: table;
+    text-align: center;
+
+  }
+.text{
+    text-align: center;
+    text-decoration: none;
+    color:black;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content{
+    padding-top: 60px;
+  }
+  .menu:hover {background-color: blue;}
+  .head3{
+    font-size:14px; 
+    color:#214fc6; 
+    font-weight:bold; 
+    text-align: left;
+    padding: 10px;
+    margin-top: 50PX;
+  }
+  .btn2 {
+    float: left;
+    width: 20%;
+    padding: 5px;
+    text-align: center;    
+    background: white;
+    border: 30px solid white;
+    box-shadow: 0 5px 15px #00000070;
+    margin-top: 0px;
+    margin-left: 50px ;
+    margin-right: 0px;
+    margin-bottom: 50px;
+    border-spacing: 10px;
+  }
+  .head4{
+    font-size:14px; 
+    color:#214fc6; 
+    font-weight:bold; 
+    text-align: left;
+    margin-bottom: 100PX;
+    margin-left: 50px ;
+  }
+  .content2{
+      margin-top: 50px;
+      background: white;
+    border: 10px solid white;
+  }
+  .footer{
+      background-color: #434343;
+      color: white;
+      height: 400px;
+      position: relative;
+  }
+  .footer .footer-bottom{
+      background: #214fc6;
+      color: white;
+      height: 50px;
+      width: 100%;
+      text-align: left;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      padding-top: 20px;
+  }
+  .footer .footer-content .footer-section{
+    flex: 1;
+    padding: 25px;
+  }
+  ul{
+    list-style: none;
+    text-align: left;
+  }
+  .contacts li{
+    padding: 10px;
+  }
